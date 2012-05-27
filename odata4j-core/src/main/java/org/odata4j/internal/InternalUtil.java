@@ -70,6 +70,7 @@ public class InternalUtil {
   };
 
   public static DateTime parseDateTime(String value) {
+    if (value == null) return null;
     Matcher matcher = DATETIME_PATTERN.matcher(value);
 
     if (matcher.matches()) {
